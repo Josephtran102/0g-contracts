@@ -13,7 +13,7 @@ describe("JOSEToken", function () {
   const TOTAL_SUPPLY = ethers.parseUnits("1000000", 18);
 
   beforeEach(async function () {
-    // Lấy signers
+    // Get signers
     const [ownerSigner, recipientSigner] = await ethers.getSigners();
     owner = ownerSigner;
     recipient = recipientSigner;

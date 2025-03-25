@@ -22,20 +22,20 @@ const config: HardhatUserConfig = {
       url: "https://evmrpc-testnet.0g.ai",
       accounts: 
         process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 16600 // Chain ID của 0G Network Testnet
+      chainId: 16600 // Chain ID 
     }
   },
   etherscan: {
     apiKey: {
-      "0g-testnet": "1UW4MIMUYTMN9KD2MEG13XKBBH825D2PUZ" // Nếu có block explorer
+      "0g-testnet": "1UW4MIMUYTMN9KD2MEG13XKBBH825D2PUZ" 
     },
     customChains: [
       {
         network: "0g-testnet",
         chainId: 16600,
         urls: {
-          apiURL: "https://chainscan-test.0g.ai/open/api", // URL của block explorer nếu có
-          browserURL: "https://chainscan-newton.0g.ai/" // URL của block explorer nếu có
+          apiURL: "https://chainscan-test.0g.ai/open/api", 
+          browserURL: "https://chainscan-newton.0g.ai/" 
         }
       }
     ]

@@ -11,13 +11,13 @@ async function main() {
   
   const joseToken = await JOSEToken.deploy(name, symbol, mintedTokens);
   
-  // Đợi transaction được confirm
+  
   const deploymentReceipt = await joseToken.deploymentTransaction()?.wait();
   
   console.log("Transaction Hash:", deploymentReceipt?.hash);
   console.log("JOSEToken address:", joseToken.target);
   
-  // Thêm thông tin explorer
+  
   if (deploymentReceipt?.hash) {
     console.log("Explorer URL:", `https://chainscan-newton.0g.ai/tx/${deploymentReceipt.hash}`);
   }
