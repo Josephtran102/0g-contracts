@@ -26,7 +26,7 @@ nano .env
 ```
 2. Input private key in .env:
 ```bash
-PRIVATE_KEY=0xyour_private_key_here
+PRIVATE_KEY=0x_your_private_key_here
 ```
 ⚠️ Important: Never share your private key or commit it to version control.
 
