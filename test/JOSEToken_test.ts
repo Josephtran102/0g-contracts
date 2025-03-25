@@ -61,10 +61,10 @@ describe("JOSEToken", function () {
       const ownerBalance = await joseToken.balanceOf(owner.address);
       const transferAmount = ownerBalance + ethers.parseUnits("1", 18);
 
-      // Expect transfer to be reverted
+      // Expect transaction to revert
       await expect(
         joseToken.transfer(recipient.address, transferAmount)
-      ).to.be.revertedWith("ERC20: transfer amount exceeds balance");
+      ).to.be.revertedWithCustomError(joseToken, "ERC20InsufficientBalance");
     });
   });
 
